@@ -1,0 +1,9 @@
+flask
+flask-smorest
+python-dotenv
+sqlalchemy
+flask-sqlalchemy
+flask-jwt-extended
+passlib
+flask-migrate
+#docker run -dp 5005:5000 -w /app -v "C:\Users\Serki\Python Course://app" rest-apis-flask-python
