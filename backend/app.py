@@ -22,7 +22,11 @@ def create_app(db_url=None):
     app = Flask(__name__)
 
     # Enable CORS for all routes
-    CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
+    CORS(app, origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://flask-rest-api-project-1.onrender.com" #Render frontend URL
+        ])
 
     models.ItemModel
 
