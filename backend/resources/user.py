@@ -5,10 +5,10 @@ from flask_jwt_extended import create_access_token, create_refresh_token, get_jw
 
 from sqlalchemy.exc import IntegrityError
 
-from backend.db import db
-from backend.blocklist import BLOCKLIST
+from db import db
+from blocklist import BLOCKLIST
 from models import UserModel
-from backend.schemas import UserSchema
+from schemas import UserSchema
 
 blp = Blueprint("Users", "users", description="Operations on users")
 

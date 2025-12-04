@@ -1,4 +1,4 @@
-from backend.db import db
+from db import db
 
 class ItemTags(db.Model):
     __tablename__ = "items_tags"

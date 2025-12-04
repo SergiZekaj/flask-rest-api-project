@@ -5,9 +5,9 @@ from flask_smorest import Blueprint, abort
 
 from sqlalchemy.exc import SQLAlchemyError, IntegrityError
 
-from backend.db import db
+from db import db
 from models import StoreModel
-from backend.schemas import StoreSchema
+from schemas import StoreSchema
 
 blp = Blueprint("stores", __name__, description="Operations on stores")
 
