@@ -3,9 +3,9 @@ from flask_smorest import Blueprint, abort
 from flask_jwt_extended import jwt_required, get_jwt
 from sqlalchemy.exc import SQLAlchemyError
 
-from db import db
+from backend.db import db
 from models import ItemModel
-from schemas import ItemSchema, ItemUpdateSchema
+from backend.schemas import ItemSchema, ItemUpdateSchema
 
 blp = Blueprint("Items", __name__, description="Operations on items")
 
