@@ -8,8 +8,8 @@ from flask_migrate import Migrate
 from flask_cors import CORS
 
 
-from backend.db import db
-from backend.blocklist import BLOCKLIST
+from db import db
+from blocklist import BLOCKLIST
 import models
 
 
