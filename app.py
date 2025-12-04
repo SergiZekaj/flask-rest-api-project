@@ -5,6 +5,7 @@ from flask import Flask, jsonify
 from flask_smorest import Api
 from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
+from flask_cors import CORS
 
 
 from db import db
@@ -19,6 +20,9 @@ from resources.user import blp as UserBlueprint
 
 def create_app(db_url=None):
     app = Flask(__name__)
+
+    # Enable CORS for all routes
+    CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"])
 
     models.ItemModel
 

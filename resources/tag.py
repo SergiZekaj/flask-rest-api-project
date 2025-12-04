@@ -75,6 +75,21 @@ class Tag(MethodView):
         tag = TagModel.query.get_or_404(tag_id)
         return tag
 
+    @blp.arguments(TagSchema)
+    @blp.response(200, TagSchema)
+    def put(self, tag_data, tag_id):
+        tag = TagModel.query.get_or_404(tag_id)
+        tag.name = tag_data["name"]
+        try:
+            db.session.add(tag)
+            db.session.commit()
+        except SQLAlchemyError as e:
+            abort(
+                500,
+                message=str(e)
+            )
+        return tag
+
     @blp.response(
         202,
         description="Deletes a tag if no item is tagged with it.",
